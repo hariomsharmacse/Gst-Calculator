@@ -18,7 +18,7 @@ body{
 
 .main{
     width: 500px;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +79,8 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0; /* Optional: Remove extra space */
 }
 
-#result{
+#result, #total{
+    text-align: left;
     font-size: 20px;
     border: 1px solid black;
     margin-top: 20px;
@@ -91,6 +92,24 @@ input[type="number"]::-webkit-outer-spin-button {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    padding-left: 4px;
+    position: relative;
+}
+
+#result::before{
+    content: "GST Amount";
+    color: black;
+    position: absolute;
+    bottom: 24px;
+    font-size: 12px;
+}
+
+#total::before{
+    content: "Total Amount";
+    color: black;
+    position: absolute;
+    bottom: 24px;
+    font-size: 12px;
 }
 
 h1{
@@ -99,6 +118,17 @@ h1{
     /*pointer-events: none;
     */color: rgb(234, 232, 232);
     letter-spacing: 2px;
+}
+
+@media (max-width:600px){
+    body{
+       height: 90vh;
+    }
+
+    .main{
+        width: 95%;
+        height: 75vh;
+    }
 }
 
 
