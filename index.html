@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gst Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer async></script>
-</head>
-<body>
+    <link rel="icon" type="image/png" href="icon.png" />
+  </head>
+  <body>
     <div class="main">
-        <h1>Gst Calculator</h1>
-        <div class="select">
-            <div class="first">
-        <label for="options">Select GST Rate</label>
-        <select id="options" name="options">
+      <h1><span>G</span>st <span>C</span>alculator</h1>
+      <div class="select">
+        <div class="first">
+          <label for="options">Select GST Rate</label>
+          <select id="options" name="options">
             <option value="0.25%">0.25%</option>
             <option value="3%">3%</option>
             <option value="5%">5%</option>
             <option value="12%">12%</option>
             <option value="18%">18%</option>
             <option value="28%">28%</option>
-        </select></div>
+          </select>
+        </div>
         <div class="second">
-        <label for="enc_exc">Select GST Excluding or Including
-        </label>
-        <select id="enc_exc" name="options">
+          <label for="enc_exc">Select GST Excluding or Including </label>
+          <select id="enc_exc" name="options">
             <option value="excluding">Excluding</option>
             <option value="including">Including</option>
-        </select></div>
-    </div>
-        <div class="enter_amount">
-            <input type="number" name="" id="amount" placeholder="Enter amount to check GST">
-            <div id="result">0</div>
-            <div id="total">0</div>
+          </select>
         </div>
-
+      </div>
+      <div class="enter_amount">
+        <input
+          type="number"
+          name=""
+          id="amount"
+          placeholder="Enter amount to check GST"
+        />
+        <div id="result">0</div>
+        <div id="total">0</div>
+      </div>
     </div>
-</body>
+
+    <script src="app.js"></script>
+  </body>
 </html>
